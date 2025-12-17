@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="Icono.jpg">
+    <title>Portfolio - Mariano Lumbreras</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: { 800: '#1a365d', 900: '#0f172a' },
+                        gold: { 500: '#d4af37' }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #f8fafc; }
+        .tab-content { display: none; animation: fadeIn 0.5s; }
+        .tab-content.active { display: block; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        .nav-btn.active { border-bottom: 3px solid #d4af37; color: #1a365d; font-weight: bold; }
+        .nav-btn:hover { background-color: rgba(26, 54, 93, 0.05); }
+    </style>
+</head>
+<body class="text-slate-800">
+
+    <header class="bg-navy-900 text-white pt-16 pb-24 px-6 relative overflow-hidden">
+        <div class="max-w-4xl mx-auto text-center relative z-10">
+            <h1 class="text-4xl md:text-6xl font-serif font-bold mb-4 tracking-wide">Mariano Lumbreras</h1>
+            <p class="text-xl md:text-2xl text-slate-300 font-light mb-8 italic">Profesional Multidisciplinario</p>
+            
+            <div class="flex flex-wrap justify-center gap-4 text-sm md:text-base text-slate-300 mb-8">
+                <span class="flex items-center gap-2"><i data-lucide="map-pin" class="w-4 h-4"></i> Mar del Plata, Buenos Aires</span>
+                <span class="flex items-center gap-2"><i data-lucide="phone" class="w-4 h-4"></i> +54 249 4516345</span>
+                <a href="mailto:marianolumbreras@gmail.com" class="flex items-center gap-2 hover:text-gold-500 transition"><i data-lucide="mail" class="w-4 h-4"></i> marianolumbreras@gmail.com</a>
+            </div>
+
+            <div class="flex justify-center gap-4">
+                <a href="https://www.linkedin.com/in/mariano-lumbreras-7761b523b" target="_blank" class="bg-gold-500 hover:bg-yellow-600 text-navy-900 px-6 py-2 rounded-full font-semibold transition flex items-center gap-2">
+                    <i data-lucide="linkedin" class="w-5 h-5"></i> LinkedIn
+                </a>
+                <div class="border border-slate-600 px-6 py-2 rounded-full text-slate-300 text-sm flex items-center gap-3">
+                    <span>Inglés C1</span> | <span>Francés B2</span>
+                </div>
+            </div>
+        </div>
+        <div class="absolute top-0 left-0 w-full h-full opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cube-coat.png')]"></div>
+    </header>
+
+    <div class="sticky top-0 z-50 bg-white shadow-md">
+        <div class="max-w-4xl mx-auto flex justify-center">
+            <button onclick="openTab('salud')" class="nav-btn active flex-1 py-4 text-center text-slate-600 font-medium md:text-lg flex justify-center gap-2 items-center transition-all">
+                <i data-lucide="activity" class="w-5 h-5"></i> <span class="hidden md:inline">Salud &</span> Cardiología
+            </button>
+            <button onclick="openTab('tenis')" class="nav-btn flex-1 py-4 text-center text-slate-600 font-medium md:text-lg flex justify-center gap-2 items-center transition-all">
+                <i data-lucide="trophy" class="w-5 h-5"></i> Tenis <span class="hidden md:inline">ITF</span>
+            </button>
+            <button onclick="openTab('it')" class="nav-btn flex-1 py-4 text-center text-slate-600 font-medium md:text-lg flex justify-center gap-2 items-center transition-all">
+                <i data-lucide="code" class="w-5 h-5"></i> IT & <span class="hidden md:inline">Ciberseguridad</span>
+            </button>
+        </div>
+    </div>
+
+    <main class="max-w-4xl mx-auto px-6 py-12 min-h-screen">
+
+        <div id="salud" class="tab-content active">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="md:col-span-2 space-y-8">
+                    <section>
+                        <h2 class="text-2xl font-serif font-bold text-navy-800 mb-4 border-b pb-2">Perfil Profesional</h2>
+                        <p class="text-slate-600 leading-relaxed text-justify">
+                            Enfermero especializado en cardiología, con amplia experiencia en ámbito de consultorio y diagnóstico cardiovascular. Técnico en cardiología con desempeño continuo en estudios funcionales y monitoreo cardíaco, orientado a la correcta ejecución técnica, control de procedimientos y elaboración de informes.
+                        </p>
+                    </section>
+                    <section>
+                        <h2 class="text-2xl font-serif font-bold text-navy-800 mb-4 border-b pb-2">Experiencia Profesional</h2>
+                        <div class="mb-6">
+                            <h3 class="text-lg font-bold text-slate-800">Técnico en Cardiología</h3>
+                            <p class="text-navy-800 font-semibold">Clínica del Corazón – Tandil <span class="text-slate-500 font-normal">| 2005 – Actualidad</span></p>
+                            <ul class="list-disc list-inside mt-2 text-slate-600 space-y-1">
+                                <li>Realización de estudios de ergometría.</li>
+                                <li>Colocación y seguimiento técnico de Holter cardíaco.</li>
+                                <li>Estudios MAPA y Ecoestrés.</li>
+                                <li>Control y seguimiento técnico de dispositivos cardíacos implantables.</li>
+                            </ul>
+                        </div>
+                    </section>
+                    <section>
+                        <h2 class="text-2xl font-serif font-bold text-navy-800 mb-4 border-b pb-2">Formación Académica</h2>
+                        <div class="space-y-4">
+                            <div><h3 class="font-bold">Licenciatura en Psicología</h3><p class="text-sm text-slate-600">UNMDP | En curso – Inicio 2025</p></div>
+                            <div><h3 class="font-bold">Enfermero</h3><p class="text-sm text-slate-600">IFTN N.º 75 – Tandil | Egreso 2005</p></div>
+                            <div><h3 class="font-bold">Técnico en Cardiología</h3><p class="text-sm text-slate-600">FAC | 2011</p></div>
+                        </div>
+                    </section>
+                </div>
+
+                <div class="space-y-8">
+                    <div class="bg-white p-6 shadow-lg rounded-xl border-t-4 border-red-600 text-center transform hover:scale-105 transition-transform duration-300">
+                        <h3 class="font-bold text-navy-800 mb-4 flex items-center justify-center gap-2"><i data-lucide="file-check" class="w-5 h-5"></i> Certificaciones</h3>
+                        
+                        <div class="bg-slate-100 p-2 rounded-lg mb-3 inline-block">
+                            <img src="qr-code.png" alt="QR Salud" class="w-40 h-40 object-contain mx-auto">
+                        </div>
+                        
+                        <a href="https://www.dropbox.com/scl/fo/4owjism0gg3z2tcrbxlzt/AOyUy7n6XMtHEcN--eHfbEA?rlkey=jdwba4tlmz0gdq1pzuufe4ozd&st=pcu30sdg&dl=0" target="_blank" rel="noopener noreferrer" class="block w-full bg-navy-800 text-white py-2 px-4 rounded-lg hover:bg-navy-900 transition text-sm font-semibold mb-2">
+                            Ver Certificados Online
+                        </a>
+                        
+                        <p class="text-xs text-slate-500">Haz clic o escanea para ver títulos oficiales (SADEC, RCP).</p>
+                    </div>
+
+                    <div class="bg-slate-50 p-6 rounded-xl">
+                        <h3 class="font-bold text-navy-800 mb-3">Competencias Técnicas</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="badge">Manejo Equipamiento</span>
+                            <span class="badge">Informes Técnicos</span>
+                            <span class="badge">Cardiología Ambulatoria</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="tenis" class="tab-content">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="md:col-span-2 space-y-8">
+                    <section>
+                        <h2 class="text-2xl font-serif font-bold text-navy-800 mb-4 border-b pb-2">Perfil Profesional</h2>
+                        <p class="text-slate-600 leading-relaxed text-justify">
+                            Profesor y entrenador de tenis ITF Nivel 2, con experiencia en formación de jugadores adolescentes y adultos. Enfermero de formación con especialización en cardiología, aportando una mirada preventiva y responsable.
+                        </p>
+                    </section>
+                    <section>
+                        <h2 class="text-2xl font-serif font-bold text-navy-800 mb-4 border-b pb-2">Experiencia Profesional</h2>
+                        <div class="mb-6">
+                            <h3 class="text-lg font-bold text-slate-800">Profesor / Entrenador</h3>
+                            <p class="text-navy-800 font-semibold">Club Teléfonos – Mar del Plata <span class="text-slate-500 font-normal">| 2021 – Actualidad</span></p>
+                            <ul class="list-disc list-inside mt-2 text-slate-600 space-y-1">
+                                <li>Clases individuales y grupales (recreativo y competitivo).</li>
+                                <li>Planificación de sesiones por objetivos.</li>
+                                <li>Enfoque preventivo (RCP y cuidado físico).</li>
+                            </ul>
+                        </div>
+                    </section>
+                    <section>
+                        <h2 class="text-2xl font-serif font-bold text-navy-800 mb-4 border-b pb-2">Formación AAT / ITF</h2>
+                        <div class="space-y-4">
+                            <div><h3 class="font-bold">Entrenador Nacional – ITF Nivel 2</h3><p class="text-sm text-slate-600">AAT | 2021</p></div>
+                            <div><h3 class="font-bold">Profesor Nacional – ITF Nivel 1</h3><p class="text-sm text-slate-600">AAT | 2020</p></div>
+                        </div>
+                    </section>
+                </div>
+
+                <div class="space-y-8">
+                    <div class="bg-white p-6 shadow-lg rounded-xl border-t-4 border-yellow-500 text-center transform hover:scale-105 transition-transform duration-300">
+                        <h3 class="font-bold text-navy-800 mb-4 flex items-center justify-center gap-2"><i data-lucide="award" class="w-5 h-5"></i> Licencias ITF</h3>
+                        
+                        <div class="bg-slate-100 p-2 rounded-lg mb-3 inline-block">
+                            <img src="qr-code (2).png" alt="QR Tenis" class="w-40 h-40 object-contain mx-auto">
+                        </div>
+                        
+                        <a href="https://www.dropbox.com/scl/fo/fntz6jm2aj4137qkvzz70/AFbwBibPyz8G0XerTJf2HIc?rlkey=jb36u26zb30xs3g2a817vh1ac&st=gxro7oge&dl=0" target="_blank" rel="noopener noreferrer" class="block w-full bg-navy-800 text-white py-2 px-4 rounded-lg hover:bg-navy-900 transition text-sm font-semibold mb-2">
+                            Ver Certificados Online
+                        </a>
+
+                        <p class="text-xs text-slate-500">Haz clic o escanea para validar credenciales AAT/ITF.</p>
+                    </div>
+
+                    <div class="bg-slate-50 p-6 rounded-xl">
+                        <h3 class="font-bold text-navy-800 mb-3">Habilidades</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="badge">Enseñanza Técnica</span>
+                            <span class="badge">Planificación</span>
+                            <span class="badge">Manejo de Grupos</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="it" class="tab-content">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="md:col-span-2 space-y-8">
+                    <section>
+                        <h2 class="text-2xl font-serif font-bold text-navy-800 mb-4 border-b pb-2">Perfil Profesional</h2>
+                        <p class="text-slate-600 leading-relaxed text-justify">
+                            Perfil junior en TI, formación en desarrollo full stack (Python), testing y ciberseguridad. Experiencia formativa en proyectos personales y prácticas guiadas. Se destaca por pensamiento analítico y aprendizaje continuo.
+                        </p>
+                    </section>
+                    <section>
+                        <h2 class="text-2xl font-serif font-bold text-navy-800 mb-4 border-b pb-2">Stack Tecnológico</h2>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="bg-white border rounded p-3">
+                                <h4 class="font-bold text-sm text-navy-800 mb-2">Lenguajes</h4>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="badge-sm">Python</span><span class="badge-sm">React</span><span class="badge-sm">SQL</span>
+                                </div>
+                            </div>
+                            <div class="bg-white border rounded p-3">
+                                <h4 class="font-bold text-sm text-navy-800 mb-2">Áreas</h4>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="badge-sm">Testing QA</span><span class="badge-sm">Ciberseguridad</span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <h2 class="text-2xl font-serif font-bold text-navy-800 mb-4 border-b pb-2">Formación IT</h2>
+                        <div class="space-y-4">
+                            <div><h3 class="font-bold">IBM SkillsBuild – Ciberseguridad</h3><p class="text-sm text-slate-600">IBM – 2025</p></div>
+                            <div><h3 class="font-bold">Desarrollador Full Stack Python</h3><p class="text-sm text-slate-600">Codo a Codo (GCBA)</p></div>
+                            <div><h3 class="font-bold">Testing QA & React</h3><p class="text-sm text-slate-600">Codo a Codo & Coderhouse</p></div>
+                        </div>
+                    </section>
+                </div>
+
+                <div class="space-y-8">
+                    <div class="bg-white p-6 shadow-lg rounded-xl border-t-4 border-blue-600 text-center transform hover:scale-105 transition-transform duration-300">
+                        <h3 class="font-bold text-navy-800 mb-4 flex items-center justify-center gap-2"><i data-lucide="shield-check" class="w-5 h-5"></i> Certificaciones IT</h3>
+                        
+                        <div class="bg-slate-100 p-2 rounded-lg mb-3 inline-block">
+                            <img src="qr-code (1).png" alt="QR IT" class="w-40 h-40 object-contain mx-auto">
+                        </div>
+                        
+                        <a href="https://www.dropbox.com/scl/fo/a6b5blmy8u19qaabi6t2b/AK9-zzL7tB0PXo1-hkzHBTg?rlkey=kf983qckqc8ql2z02gjeix7e0&st=sahvzz51&dl=0" target="_blank" rel="noopener noreferrer" class="block w-full bg-navy-800 text-white py-2 px-4 rounded-lg hover:bg-navy-900 transition text-sm font-semibold mb-2">
+                            Ver Certificados Online
+                        </a>
+
+                        <p class="text-xs text-slate-500">Haz clic o escanea para verificar credenciales (IBM, Codo a Codo).</p>
+                    </div>
+
+                    <div class="bg-slate-50 p-6 rounded-xl">
+                        <h3 class="font-bold text-navy-800 mb-3">Soft Skills</h3>
+                        <ul class="text-sm text-slate-600 space-y-2">
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3 h-3 text-green-500"></i> Pensamiento Analítico</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3 h-3 text-green-500"></i> Lógica Estructurada</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="bg-navy-900 text-slate-400 py-8 text-center text-sm">
+        <p>© 2025 Mariano Lumbreras. Desarrollado con tecnología web moderna.</p>
+    </footer>
+
+    <style>
+        .badge { @apply px-3 py-1 bg-white border border-slate-200 rounded-full text-xs text-slate-700; }
+        .badge-sm { @apply text-xs bg-slate-100 px-2 py-1 rounded; }
+    </style>
+
+    <script>
+        lucide.createIcons();
+        function openTab(tabName) {
+            var i, tabcontent, navbtns;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+                tabcontent[i].classList.remove("active");
+            }
+            navbtns = document.getElementsByClassName("nav-btn");
+            for (i = 0; i < navbtns.length; i++) {
+                navbtns[i].classList.remove("active");
+                navbtns[i].classList.remove("text-navy-900");
+                navbtns[i].classList.remove("border-b-4");
+            }
+            document.getElementById(tabName).style.display = "block";
+            setTimeout(() => { document.getElementById(tabName).classList.add("active"); }, 10);
+            
+            const buttons = document.getElementsByTagName("button");
+            for (let btn of buttons) {
+                if(btn.getAttribute("onclick") === `openTab('${tabName}')`) {
+                    btn.classList.add("active");
+                }
+            }
+        }
+    </script>
+</body>
+</html>
